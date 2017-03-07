@@ -1,0 +1,45 @@
+Tree user;
+Tree user2;
+Tree user3;
+
+float angle = 60;
+float angle2 = 10;
+float range = 20;
+
+float animFacAngle;
+float opacityFac;
+
+float thickness = 60;
+float lengthFac1 = 0.20;
+float lengthFac2 = 0.7;
+
+import controlP5.*;
+ControlP5 cp5;
+
+void setup() {
+  size(600, 600);
+  cp5 = new ControlP5(this);
+  user = new Tree(); 
+  user2 = new Tree();
+  user3 = new Tree();
+
+  cp5.addSlider("angle").setPosition(20, 20).setRange(0, 180);
+  cp5.addSlider("range").setPosition(430, 20).setRange(5, 50);
+}
+
+void draw() {
+  background(#eca638);
+  pushMatrix();
+  translate(width*0.8,height);
+  popMatrix();
+  
+  animFacAngle = sin(millis() * 0.001) * 5;
+  //println(animFacAngle);
+  
+  
+    background(#ffb85d);
+  user.display(range, angle, 90, 0); 
+  user2.display(range, angle, -90, 0);
+  user3.display(range, angle, 0, 90);
+ 
+}
