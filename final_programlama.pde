@@ -26,22 +26,22 @@
       }
       fill(0);
       stroke(255);
-      textSize(52);
+      textSize(42);
       if(end){
       rect(20,20,100,50);
       fill(255);
-      text(score,40,70);
+      text(score,55,60);
       }else{
-      rect(150,100,200,50);
-      rect(150,200,200,50);
+      rect(100,100,300,50);
+      rect(100,200,300,50);
       fill(255);
       if(intro){
-        text("Flappy Code",155,140);
-        text("Click to Play",155,240);
+        text("Flappy Code",125,140);
+        text("Click to Play",125,240);
       }else{
       text("SORRY  ",176,140);
-      text("score",149,240);
-      text(score,280,240);
+      text("score",180,240);
+      text(score,300,240);
       }
       }
     }
